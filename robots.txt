@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://souzastenio812-byte.github.io/portfolio-stenio/sitemap.xml

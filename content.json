@@ -1,0 +1,276 @@
+{
+  "applications": [
+    {
+      "name": "Transformação de tabelas e etiquetas de cliente",
+      "category": "Automação em Python",
+      "technologies": [
+        "Python"
+      ],
+      "description": "Aplicação que desenvolvi para transformar tabelas e gerar etiquetas de cliente a partir dos dados da operação.",
+      "purpose": "Automatizar a preparação dos dados e das etiquetas utilizados na rotina operacional."
+    },
+    {
+      "name": "Vias de embarque com QR Code",
+      "category": "Automação em Python",
+      "technologies": [
+        "Python",
+        "QR Code"
+      ],
+      "description": "Geração automatizada de vias de embarque com QR Code para conferência.",
+      "purpose": "Apoiar a emissão dos documentos e a conferência do embarque com leitura do QR Code."
+    },
+    {
+      "name": "Conferência de etiquetas por bipagem",
+      "category": "Automação em Python",
+      "technologies": [
+        "Python",
+        "Planilhas",
+        "Bipagem"
+      ],
+      "description": "Batimento dos dados das etiquetas em planilha, com conferência por bipagem.",
+      "purpose": "Comparar os dados das etiquetas durante a leitura e apoiar a conferência operacional."
+    },
+    {
+      "name": "CLT Fácil",
+      "category": "Site em HTML",
+      "technologies": [
+        "HTML"
+      ],
+      "description": "Site com seis calculadoras: salário líquido, horas extras, férias, 13º salário, FGTS e rescisão.",
+      "purpose": "Facilitar a consulta de estimativas trabalhistas em uma interface pensada para celular. Os resultados têm caráter educacional.",
+      "demoUrl": "https://souzastenio812-byte.github.io/clt-facil-site/",
+      "repositoryUrl": "https://github.com/souzastenio812-byte/clt-facil-site"
+    }
+  ],
+  "careerObjectives": [
+    "Analista de Suporte",
+    "Analista de TI",
+    "Analista de Sistemas"
+  ],
+  "contact": {
+    "name": "Stênio Henrique de Souza",
+    "city": "Varginha — MG",
+    "email": "souzastenio812@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/stênio-henrique-de-souza-6307421ba"
+  },
+  "courses": [
+    {
+      "name": "Multiplicador de Processos e Elaboração de WI",
+      "institution": "DHL Supply Chain",
+      "year": 2025
+    },
+    {
+      "name": "Multiplicador Interno",
+      "institution": "Cooper Standard",
+      "year": 2024
+    },
+    {
+      "name": "Auditoria Interna",
+      "institution": "PP Print Embalagens",
+      "year": 2024
+    },
+    {
+      "name": "Indústria 4.0",
+      "institution": "SENAI"
+    },
+    {
+      "name": "Excel — Nível Intermediário/Avançado",
+      "institution": "CEDUP"
+    }
+  ],
+  "education": [
+    {
+      "course": "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+      "school": "Universidade Estácio",
+      "status": "Cursando",
+      "completionYear": 2028
+    },
+    {
+      "course": "Tecnólogo em Gestão da Qualidade",
+      "school": "UniCesumar",
+      "status": "Cursando",
+      "completionYear": 2026
+    },
+    {
+      "course": "Técnico em Redes de Computadores",
+      "school": "SENAI",
+      "status": "Concluído",
+      "completionYear": 2024
+    }
+  ],
+  "experiences": [
+    {
+      "role": "Analista Jr. de Qualidade e Logística",
+      "company": "DHL Supply Chain",
+      "period": "Jun/2026 — Atual",
+      "current": true,
+      "responsibilities": [
+        "Acompanhamento de indicadores de qualidade e logística, relatórios e análises para decisões operacionais.",
+        "Monitoramento de recebimento, armazenagem, expedição e inspeção conforme padrões e requisitos de clientes.",
+        "Investigação de não conformidades, identificação de causas e acompanhamento de ações corretivas e preventivas.",
+        "Atualização e padronização de procedimentos, controles e documentos do Sistema de Gestão da Qualidade.",
+        "Apoio a auditorias internas e externas, com organização de evidências e registros.",
+        "Interface entre operação, qualidade, transportadoras, fornecedores e áreas administrativas para rastreabilidade e redução de falhas.",
+        "Promoção a Analista Jr. em reconhecimento à melhoria de processos, análise de indicadores e suporte às operações logísticas."
+      ]
+    },
+    {
+      "role": "Assistente de Qualidade",
+      "company": "DHL Supply Chain",
+      "period": "Mar/2025 — Jun/2026",
+      "current": false,
+      "responsibilities": [
+        "Análise de dados, criação e acompanhamento de KPIs, relatórios e suporte a auditorias internas e externas.",
+        "Controles e procedimentos do SGQ; inspeções na expedição, recebimento e etapas logísticas.",
+        "Implementação e acompanhamento de ações corretivas para reduzir devoluções, falhas operacionais e retrabalhos.",
+        "Tratativas com fornecedores, transportadoras e áreas internas; integração entre equipes administrativas e operacionais.",
+        "Implantação de fluxo de inspeção que reduziu em mais de 75% as devoluções por avarias, melhorando padrão e rastreabilidade."
+      ]
+    },
+    {
+      "role": "Técnico de Laboratório — Desenvolvimento",
+      "company": "PP Print Embalagens",
+      "period": "Abr/2024 — Mar/2025",
+      "current": false,
+      "responsibilities": [
+        "Cadastro e atualização de especificações de produtos e matérias-primas, laudos e validação de amostras.",
+        "KPIs de qualidade, relatórios e estudos para decisões e melhorias produtivas.",
+        "Análises laboratoriais, monitoramento de parâmetros de produção e conferências técnicas em linha.",
+        "Rotinas no ERP TOTVS Protheus: cadastros, testes, parametrizações e controles; participação ativa na implementação dos módulos de Inspeção de Entrada e MRP.",
+        "Suporte a engenharia, produção e qualidade na análise de falhas, padronização e soluções para divergências técnicas e retrabalhos."
+      ]
+    },
+    {
+      "role": "Assistente de Gestão da Qualidade | Aprendiz Logístico",
+      "company": "Cooper Standard",
+      "period": "Fev/2022 — Mar/2024",
+      "current": false,
+      "responsibilities": [
+        "Análise de reclamações, identificação de causas e suporte a ações corretivas, preventivas e melhorias.",
+        "KPIs, dashboards e relatórios de performance.",
+        "Controle de contas de contenção, rotinas administrativas e uso de SAP para consultas, cadastros e suporte às operações.",
+        "Reuniões de resultados, análises e tendências para decisões.",
+        "Padronização de documentos e fluxo de informações entre produção e qualidade."
+      ]
+    }
+  ],
+  "professionalProjects": [
+    {
+      "name": "Estruturação do Processo de Inspeção de Qualidade",
+      "company": "DHL Supply Chain",
+      "description": "Criação de fluxos, critérios, documentação e treinamentos na operação logística.",
+      "result": "Redução superior a 75% nas devoluções por avarias, maior precisão das conferências e padronização no SGQ."
+    },
+    {
+      "name": "Implementação de Inspeção de Entrada e MRP",
+      "company": "PP Print Embalagens",
+      "description": "Participação ativa na implementação dos módulos no TOTVS Protheus, incluindo estruturação e cadastro de dados.",
+      "result": "Maior precisão operacional."
+    }
+  ],
+  "sections": [
+    {
+      "id": "perfil",
+      "label": "Perfil"
+    },
+    {
+      "id": "experiencia",
+      "label": "Experiência"
+    },
+    {
+      "id": "aplicacoes",
+      "label": "Aplicações"
+    },
+    {
+      "id": "projetos-profissionais",
+      "label": "Projetos profissionais"
+    },
+    {
+      "id": "formacao",
+      "label": "Formação"
+    },
+    {
+      "id": "cursos",
+      "label": "Cursos"
+    },
+    {
+      "id": "competencias",
+      "label": "Competências"
+    },
+    {
+      "id": "contato",
+      "label": "Contato"
+    }
+  ],
+  "skills": [
+    {
+      "title": "Dados e produtividade",
+      "items": [
+        "Pacote Office avançado",
+        "Excel avançado",
+        "Power BI",
+        "Python",
+        "SQL"
+      ]
+    },
+    {
+      "title": "Desenvolvimento web",
+      "items": [
+        "HTML"
+      ]
+    },
+    {
+      "title": "Sistemas corporativos",
+      "items": [
+        "TOTVS Protheus",
+        "SAP",
+        "Blue Yonder",
+        "ETQ Reliance"
+      ]
+    },
+    {
+      "title": "Redes e infraestrutura",
+      "items": [
+        "Cisco Packet Tracer",
+        "SSH",
+        "DNS",
+        "Firewalls",
+        "VOIP",
+        "Dispositivos",
+        "PABX",
+        "Linux",
+        "Active Directory"
+      ]
+    },
+    {
+      "title": "Colaboração",
+      "items": [
+        "Trello",
+        "Microsoft Teams",
+        "Google Meet",
+        "Zoom",
+        "Notion",
+        "Outlook"
+      ]
+    },
+    {
+      "title": "Qualidade e processos",
+      "items": [
+        "KPIs",
+        "SGQ",
+        "Análise de não conformidades",
+        "Auditorias internas",
+        "Controle de documentos",
+        "Procedimentos",
+        "Melhoria contínua",
+        "Controle de qualidade",
+        "Inspeção",
+        "Análise laboratorial",
+        "Preparação de amostras",
+        "Testes de materiais",
+        "Calibração",
+        "Registro de resultados"
+      ]
+    }
+  ]
+}
