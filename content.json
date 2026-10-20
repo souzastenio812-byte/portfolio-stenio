@@ -7,7 +7,31 @@
         "Python"
       ],
       "description": "Aplicação que desenvolvi para transformar tabelas e gerar etiquetas de cliente a partir dos dados da operação.",
-      "purpose": "Automatizar a preparação dos dados e das etiquetas utilizados na rotina operacional."
+      "purpose": "Automatizar a preparação dos dados e das etiquetas utilizados na rotina operacional.",
+      "id": "tabelas-etiquetas",
+      "kind": "python",
+      "case": {
+        "context": "Preparação de tabelas e etiquetas de cliente utilizadas na rotina operacional.",
+        "solution": "Desenvolvi uma aplicação em Python para transformar as tabelas e gerar etiquetas a partir dos dados da operação.",
+        "delivery": "Tabelas transformadas e etiquetas de cliente geradas pela aplicação."
+      },
+      "flow": [
+        {
+          "label": "01 / ENTRADA",
+          "title": "Tabelas da operação",
+          "description": "Dados de origem"
+        },
+        {
+          "label": "02 / PROCESSAMENTO",
+          "title": "Transformação em Python",
+          "description": "Preparação dos dados"
+        },
+        {
+          "label": "03 / SAÍDA",
+          "title": "Etiquetas de cliente",
+          "description": "Dados aplicados às etiquetas"
+        }
+      ]
     },
     {
       "name": "Vias de embarque com QR Code",
@@ -17,7 +41,31 @@
         "QR Code"
       ],
       "description": "Geração automatizada de vias de embarque com QR Code para conferência.",
-      "purpose": "Apoiar a emissão dos documentos e a conferência do embarque com leitura do QR Code."
+      "purpose": "Apoiar a emissão dos documentos e a conferência do embarque com leitura do QR Code.",
+      "id": "embarque-qr-code",
+      "kind": "python",
+      "case": {
+        "context": "Emissão de vias de embarque associada à conferência dos documentos na expedição.",
+        "solution": "Automatizei a geração das vias em Python, incluindo QR Code para apoiar a conferência por leitura.",
+        "delivery": "Vias de embarque geradas automaticamente com QR Code de conferência."
+      },
+      "flow": [
+        {
+          "label": "01 / ENTRADA",
+          "title": "Dados de embarque",
+          "description": "Informações da expedição"
+        },
+        {
+          "label": "02 / PROCESSAMENTO",
+          "title": "Geração automatizada",
+          "description": "Vias de embarque + QR Code"
+        },
+        {
+          "label": "03 / SAÍDA",
+          "title": "Documentos para conferência",
+          "description": "Leitura do QR Code"
+        }
+      ]
     },
     {
       "name": "Conferência de etiquetas por bipagem",
@@ -28,7 +76,31 @@
         "Bipagem"
       ],
       "description": "Batimento dos dados das etiquetas em planilha, com conferência por bipagem.",
-      "purpose": "Comparar os dados das etiquetas durante a leitura e apoiar a conferência operacional."
+      "purpose": "Comparar os dados das etiquetas durante a leitura e apoiar a conferência operacional.",
+      "id": "conferencia-bipagem",
+      "kind": "python",
+      "case": {
+        "context": "Conferência das informações das etiquetas por comparação com os dados registrados em planilha.",
+        "solution": "Desenvolvi a rotina em Python para apoiar o batimento de dados das etiquetas, utilizando a bipagem durante a conferência.",
+        "delivery": "Planilha de batimento de dados utilizada na conferência das etiquetas por bipagem."
+      },
+      "flow": [
+        {
+          "label": "01 / ENTRADA",
+          "title": "Leitura das etiquetas",
+          "description": "Bipagem"
+        },
+        {
+          "label": "02 / PROCESSAMENTO",
+          "title": "Batimento de dados",
+          "description": "Comparação com a planilha"
+        },
+        {
+          "label": "03 / SAÍDA",
+          "title": "Conferência operacional",
+          "description": "Validação dos dados lidos"
+        }
+      ]
     },
     {
       "name": "CLT Fácil",
@@ -39,7 +111,31 @@
       "description": "Site com seis calculadoras: salário líquido, horas extras, férias, 13º salário, FGTS e rescisão.",
       "purpose": "Facilitar a consulta de estimativas trabalhistas em uma interface pensada para celular. Os resultados têm caráter educacional.",
       "demoUrl": "https://souzastenio812-byte.github.io/clt-facil-site/",
-      "repositoryUrl": "https://github.com/souzastenio812-byte/clt-facil-site"
+      "repositoryUrl": "https://github.com/souzastenio812-byte/clt-facil-site",
+      "id": "clt-facil",
+      "kind": "web",
+      "case": {
+        "context": "Consulta de estimativas de salário líquido, horas extras, férias, 13º, FGTS e rescisão em um único site.",
+        "solution": "Desenvolvi o site em HTML com seis calculadoras, interface adaptada ao celular e publicação no GitHub Pages.",
+        "delivery": "Site público com simulações trabalhistas e código disponível no GitHub. Os resultados têm caráter educacional."
+      },
+      "flow": [
+        {
+          "label": "01 / ENTRADA",
+          "title": "Dados informados",
+          "description": "Valores da simulação"
+        },
+        {
+          "label": "02 / PROCESSAMENTO",
+          "title": "Calculadora selecionada",
+          "description": "6 modalidades"
+        },
+        {
+          "label": "03 / SAÍDA",
+          "title": "Estimativa trabalhista",
+          "description": "Consulta educacional"
+        }
+      ]
     }
   ],
   "careerObjectives": [
@@ -51,7 +147,8 @@
     "name": "Stênio Henrique de Souza",
     "city": "Varginha — MG",
     "email": "souzastenio812@gmail.com",
-    "linkedin": "https://www.linkedin.com/in/stênio-henrique-de-souza-6307421ba"
+    "linkedin": "https://www.linkedin.com/in/stênio-henrique-de-souza-6307421ba",
+    "github": "https://github.com/souzastenio812-byte"
   },
   "courses": [
     {
@@ -272,5 +369,6 @@
         "Registro de resultados"
       ]
     }
-  ]
+  ],
+  "siteUrl": "https://souzastenio812-byte.github.io/portfolio-stenio/"
 }

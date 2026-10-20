@@ -9,11 +9,13 @@ Portfólio profissional em português, com aplicações em Python, CLT Fácil, e
 HTML semântico, CSS responsivo e JavaScript nativo. Sem bibliotecas, fontes externas, rastreadores ou serviços de backend. O conteúdo permanece acessível sem JavaScript.
 
 - Filtros de projetos por categoria.
+- Análise de cada projeto: contexto, solução e entrega.
 - Diagramas de fluxo funcional (representações, não capturas dos aplicativos).
 - Navegação móvel e por teclado.
 - Preferência de movimento reduzido respeitada.
 - Impressão com todos os projetos e responsabilidades, independentemente dos filtros.
 - Metadados para mecanismos de busca e compartilhamento.
+- Dados estruturados ProfilePage/Person com cargo e empresa reais.
 
 ## Desenvolvimento local
 
@@ -33,14 +35,42 @@ O arquivo `content.json` concentra dados do currículo e das aplicações. `buil
 python build.py
 ```
 
-Nenhuma dependência adicional é necessária. O GitHub Pages serve o HTML já gerado; Python não é executado no servidor.
+Requer Python 3.12 ou superior, sem dependências adicionais. O GitHub Pages serve o HTML já gerado; Python não é executado no servidor.
 
-Os textos da apresentação, fluxos e entregas profissionais estão em `build.py`; o visual em `styles.css`; as interações em `app.js`.
+Cada aplicação em `content.json` tem um `id` único, categoria `kind` (`python` ou `web`), tecnologias, fluxo `flow` e análise `case` com `context`, `solution` e `delivery`. A ordem dos projetos pode ser alterada sem trocar os fluxos ou categorias. Os contadores são calculados automaticamente. Links de site e repositório são opcionais e devem usar HTTPS.
+
+Os textos de apresentação e entregas profissionais estão em `build.py`; os componentes de projetos e dados estruturados em `site_components.py`; o visual em `styles.css`; as interações em `app.js`.
+
+Para incluir uma captura real, coloque a imagem no projeto, por exemplo `images/etiquetas.webp`, e acrescente ao objeto da aplicação:
+
+```json
+"image": {
+  "src": "images/etiquetas.webp",
+  "alt": "Tela da aplicação de etiquetas preenchida com dados de exemplo",
+  "caption": "Geração de etiquetas de cliente"
+}
+```
+
+Use somente capturas autorizadas, com dados de exemplo. O texto alternativo é obrigatório. Gere novamente `index.html` após editar o conteúdo.
+
+## Verificação
+
+```sh
+python build.py
+python -m unittest -v
+node --check app.js
+```
+
+Os testes cobrem reordenação e inclusão de projetos, escape de HTML, validação de links e imagens, dados estruturados, âncoras, arquivos locais e estrutura básica do documento. Node é necessário apenas para a verificação opcional da sintaxe JavaScript.
+
+O workflow `.github/workflows/ci.yml` executa essas verificações em pushes para `main`, pull requests e execução manual. Também verifica se `index.html` foi regenerado após alterações. Usa acesso de leitura ao repositório, sem segredos.
 
 ## GitHub Pages
 
 Configuração: **Settings → Pages → Deploy from a branch → main → / (root)**.
 Os caminhos de CSS, JavaScript e retrato são relativos, compatíveis com o subdiretório do repositório.
+
+O workflow de verificação informa falhas; a publicação por branch do GitHub Pages ocorre separadamente. Antes de publicar, execute as verificações locais. Para reverter uma atualização, restaure a versão anterior dos arquivos pelo histórico de commits.
 
 ## Conteúdo e privacidade
 

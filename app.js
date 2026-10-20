@@ -14,7 +14,17 @@ menuButton.addEventListener("click", () => {
   menuButton.querySelector("span").textContent = opened ? "−" : "+";
 });
 navigation.addEventListener("click", (event) => {
-  if (event.target.closest("a")) closeMenu();
+  const link = event.target.closest("a");
+  if (!link) return;
+  const wasOpen = navigation.classList.contains("open");
+  closeMenu();
+  if (wasOpen) {
+    const section = document.getElementById(link.hash.slice(1));
+    if (section) {
+      section.setAttribute("tabindex", "-1");
+      section.focus({ preventScroll: true });
+    }
+  }
 });
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && navigation.classList.contains("open")) {
