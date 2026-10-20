@@ -135,3 +135,22 @@ section:focus-visible, main:focus-visible { outline: 2px solid var(--green); out
   .case-details > div + div { margin-top: 8px; }
   .project-screenshot { break-inside: avoid; }
 }
+
+.contact-whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 18px;
+  padding: 15px 18px;
+  border: 1px solid #64834c;
+  border-radius: 5px;
+  background: #1d2c20;
+  color: var(--green);
+}
+.contact-whatsapp > span:first-child { display: flex; flex-direction: column; gap: 3px; }
+.contact-whatsapp strong { color: var(--text); font-size: 19px; font-weight: 500; }
+.contact-whatsapp:hover { border-color: var(--green); background: #243722; }
+.course-school { flex-shrink: 1; max-width: 48%; }
+@media screen and (max-width: 580px) { .course-school { max-width: 100%; } }
+@media print { .contact-whatsapp { background: #fff; border-color: #777; padding: 9px; margin-top: 10px; } .contact-whatsapp strong { font-size: 11pt; } }

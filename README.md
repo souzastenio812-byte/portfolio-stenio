@@ -74,6 +74,8 @@ O workflow de verificação informa falhas; a publicação por branch do GitHub 
 
 ## Conteúdo e privacidade
 
-Informações baseadas no currículo e nos projetos descritos pelo autor. O retrato é o original fornecido. O PDF original do currículo, telefone, documentos e dados operacionais de clientes não fazem parte do repositório.
+Informações baseadas no currículo e nos projetos descritos pelo autor. O retrato é o original fornecido. O WhatsApp profissional foi incluído por solicitação do autor. O PDF original do currículo, documentos e dados operacionais de clientes não fazem parte do repositório.
 
 As imagens reais das aplicações poderão ser adicionadas posteriormente. Não há demonstrações inventadas ou botões que apontam para links inexistentes. O CLT Fácil tem links públicos; os demais projetos apresentam sua finalidade e fluxo.
+
+As descrições das aplicações de etiquetas e vias de exportação foram detalhadas a partir dos scripts fornecidos pelo autor. O curso de Inteligência Artificial no Bradesco, em parceria com o Google, foi informado como concluído; o título oficial, a carga horária e a data do certificado não foram fornecidos.

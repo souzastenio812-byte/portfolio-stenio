@@ -1,69 +1,77 @@
 {
   "applications": [
     {
-      "name": "Transformação de tabelas e etiquetas de cliente",
+      "name": "Etiquetas de cliente com QR Code",
       "category": "Automação em Python",
       "technologies": [
-        "Python"
+        "Python",
+        "Tkinter",
+        "pandas",
+        "openpyxl",
+        "ReportLab",
+        "qrcode"
       ],
-      "description": "Aplicação que desenvolvi para transformar tabelas e gerar etiquetas de cliente a partir dos dados da operação.",
-      "purpose": "Automatizar a preparação dos dados e das etiquetas utilizados na rotina operacional.",
+      "description": "Aplicação desktop que importa uma planilha Excel, verifica IDs de volume duplicados e gera etiquetas em PDF com QR Code.",
+      "purpose": "Automatizar a geração de etiquetas por volume a partir dos dados da planilha.",
       "id": "tabelas-etiquetas",
       "kind": "python",
       "case": {
-        "context": "Preparação de tabelas e etiquetas de cliente utilizadas na rotina operacional.",
-        "solution": "Desenvolvi uma aplicação em Python para transformar as tabelas e gerar etiquetas a partir dos dados da operação.",
-        "delivery": "Tabelas transformadas e etiquetas de cliente geradas pela aplicação."
+        "context": "Preparação de etiquetas de cliente com identificação, produto, quantidade, peso e dados do volume a partir de uma base Excel.",
+        "solution": "Desenvolvi a interface em Tkinter e a leitura de arquivos .xlsx com pandas e openpyxl. Antes da geração, a aplicação verifica duplicidades na coluna IDV e interrompe o processo quando encontra IDs repetidos.",
+        "delivery": "PDF com uma etiqueta de 95 × 140 mm por linha da planilha. O ReportLab monta os documentos e a biblioteca qrcode gera um QR Code com o IDV de cada volume."
       },
       "flow": [
         {
           "label": "01 / ENTRADA",
-          "title": "Tabelas da operação",
-          "description": "Dados de origem"
+          "title": "Planilha Excel (.xlsx)",
+          "description": "Dados do produto e do volume"
         },
         {
           "label": "02 / PROCESSAMENTO",
-          "title": "Transformação em Python",
-          "description": "Preparação dos dados"
+          "title": "Verificação de IDs duplicados",
+          "description": "Leitura da base e geração do QR Code"
         },
         {
           "label": "03 / SAÍDA",
-          "title": "Etiquetas de cliente",
-          "description": "Dados aplicados às etiquetas"
+          "title": "Etiquetas em PDF",
+          "description": "Uma etiqueta por linha • 95 × 140 mm"
         }
       ]
     },
     {
-      "name": "Vias de embarque com QR Code",
+      "name": "Vias de exportação com QR Code",
       "category": "Automação em Python",
       "technologies": [
         "Python",
-        "QR Code"
+        "CustomTkinter",
+        "tksheet",
+        "pandas",
+        "ReportLab"
       ],
-      "description": "Geração automatizada de vias de embarque com QR Code para conferência.",
-      "purpose": "Apoiar a emissão dos documentos e a conferência do embarque com leitura do QR Code.",
+      "description": "Sistema desktop com tabela editável e importação/exportação de Excel. Agrupa itens por palete e gera vias em PDF com QR Codes para conferência.",
+      "purpose": "Organizar a base de exportação e gerar uma via por palete, reunindo seus itens e códigos de conferência.",
       "id": "embarque-qr-code",
       "kind": "python",
       "case": {
-        "context": "Emissão de vias de embarque associada à conferência dos documentos na expedição.",
-        "solution": "Automatizei a geração das vias em Python, incluindo QR Code para apoiar a conferência por leitura.",
-        "delivery": "Vias de embarque geradas automaticamente com QR Code de conferência."
+        "context": "Emissão de vias de exportação com os itens de cada palete, importador, expedidor, referência e nota fiscal.",
+        "solution": "Desenvolvi a interface com CustomTkinter e uma tabela editável com tksheet. O sistema cria uma base modelo, carrega e salva planilhas Excel com pandas e agrupa os registros pelo número do palete.",
+        "delivery": "PDF único em A4 paisagem, com uma via por palete e um QR Code por item. Cada código reúne nota fiscal, código do produto, quantidade e número do palete. O ReportLab ajusta o conteúdo à área disponível da página."
       },
       "flow": [
         {
           "label": "01 / ENTRADA",
-          "title": "Dados de embarque",
-          "description": "Informações da expedição"
+          "title": "Excel ou tabela editável",
+          "description": "Palete, nota fiscal, produto e quantidade"
         },
         {
           "label": "02 / PROCESSAMENTO",
-          "title": "Geração automatizada",
-          "description": "Vias de embarque + QR Code"
+          "title": "Agrupamento por palete",
+          "description": "Montagem das vias e QR Codes por item"
         },
         {
           "label": "03 / SAÍDA",
-          "title": "Documentos para conferência",
-          "description": "Leitura do QR Code"
+          "title": "PDF de exportação",
+          "description": "Uma via por palete • A4 paisagem"
         }
       ]
     },
@@ -148,9 +156,19 @@
     "city": "Varginha — MG",
     "email": "souzastenio812@gmail.com",
     "linkedin": "https://www.linkedin.com/in/stênio-henrique-de-souza-6307421ba",
-    "github": "https://github.com/souzastenio812-byte"
+    "github": "https://github.com/souzastenio812-byte",
+    "whatsapp": {
+      "number": "5535998650552",
+      "display": "(35) 99865-0552",
+      "url": "https://wa.me/5535998650552"
+    }
   },
   "courses": [
+    {
+      "name": "Inteligência Artificial (IA)",
+      "institution": "Bradesco — em parceria com o Google",
+      "status": "Concluído"
+    },
     {
       "name": "Multiplicador de Processos e Elaboração de WI",
       "institution": "DHL Supply Chain",

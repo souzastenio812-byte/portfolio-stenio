@@ -24,8 +24,16 @@ for item in data["experiences"]:
 
 skill_cards = "".join(f'<article class="skill-card"><span class="micro">STACK / 0{i+1}</span><h3>{e(group["title"])}</h3>{tags(group["items"])}</article>' for i,group in enumerate(data["skills"]))
 education = "".join(f'<article class="education-card"><span class="education-status">{"PREVISÃO" if item["status"]=="Cursando" else "CONCLUSÃO"} / {item["completionYear"]}</span><h3>{e(item["course"])}</h3><p>{e(item["school"])}</p><span class="course-state">{e(item["status"])}</span></article>' for item in data["education"])
-courses = "".join(f'<li><span>{e(item["name"])}</span><span class="course-school">{e(item["institution"])}{f" · {item['year']}" if item.get("year") else ""}</span></li>' for item in data["courses"])
+courses = "".join(
+    f'<li><span>{e(item["name"])}'
+    f'{f" · {e(item['status'])}" if item.get("status") else ""}</span>'
+    f'<span class="course-school">{e(item["institution"])}'
+    f'{f" · {item['year']}" if item.get("year") else ""}</span></li>'
+    for item in data["courses"]
+)
 linkedin = e(https_link(data["contact"]["linkedin"]), quote=True)
+whatsapp = e(https_link(data["contact"]["whatsapp"]["url"]), quote=True)
+whatsapp_display = e(data["contact"]["whatsapp"]["display"])
 
 html = f'''<!doctype html>
 <html lang="pt-BR">
@@ -119,7 +127,7 @@ html = f'''<!doctype html>
 
     <section class="contact section-shell section-block" id="contato" aria-labelledby="contact-title">
       <div class="section-label"><span>07 / CONTATO</span><span class="fine-rule"></span></div>
-      <div class="contact-grid"><div><p class="eyebrow">SUPORTE · TI · SISTEMAS</p><h2 id="contact-title">Vamos conversar<br>sobre <span>tecnologia?</span></h2><p>Para oportunidades profissionais ou uma conversa sobre meus projetos.</p></div><div class="contact-links"><a class="contact-email" href="mailto:souzastenio812@gmail.com"><span class="micro">E-MAIL</span><strong>souzastenio812@gmail.com</strong><span aria-hidden="true">↗</span></a><div class="social-links"><a href="{linkedin}" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/souzastenio812-byte" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><button class="copy-email" hidden>Copiar e-mail <span aria-hidden="true">⧉</span></button></div><p class="copy-status" role="status" aria-live="polite"></p></div></div>
+      <div class="contact-grid"><div><p class="eyebrow">SUPORTE · TI · SISTEMAS</p><h2 id="contact-title">Vamos conversar<br>sobre <span>tecnologia?</span></h2><p>Para oportunidades profissionais ou uma conversa sobre meus projetos.</p></div><div class="contact-links"><a class="contact-email" href="mailto:souzastenio812@gmail.com"><span class="micro">E-MAIL</span><strong>souzastenio812@gmail.com</strong><span aria-hidden="true">↗</span></a><a class="contact-whatsapp" href="{whatsapp}" target="_blank" rel="noopener noreferrer" aria-label="Conversar com Stênio pelo WhatsApp: {whatsapp_display} (abre em nova aba)"><span><span class="micro">WHATSAPP</span><strong>{whatsapp_display}</strong></span><span aria-hidden="true">↗</span></a><div class="social-links"><a href="{linkedin}" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/souzastenio812-byte" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><button class="copy-email" hidden>Copiar e-mail <span aria-hidden="true">⧉</span></button></div><p class="copy-status" role="status" aria-live="polite"></p></div></div>
     </section>
   </main>
   <footer class="footer section-shell"><span>© <span data-year>2026</span> Stênio Henrique de Souza</span><span class="mono">Processos reais. Soluções em código.</span><a href="#inicio">Voltar ao topo <span aria-hidden="true">↑</span></a></footer>

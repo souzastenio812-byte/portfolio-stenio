@@ -62,12 +62,12 @@
     <article class="project-card" id="projeto-tabelas-etiquetas" data-category="python" aria-labelledby="title-tabelas-etiquetas">
       <div class="project-copy">
         <div class="project-top"><span class="project-number" aria-hidden="true">01</span><span class="micro">PYTHON / AUTOMAÇÃO OPERACIONAL</span></div>
-        <h3 id="title-tabelas-etiquetas">Transformação de tabelas e etiquetas de cliente</h3>
-        <p>Aplicação que desenvolvi para transformar tabelas e gerar etiquetas de cliente a partir dos dados da operação.</p>
-        <ul class="tags" aria-label="Tecnologias"><li>Python</li></ul>
+        <h3 id="title-tabelas-etiquetas">Etiquetas de cliente com QR Code</h3>
+        <p>Aplicação desktop que importa uma planilha Excel, verifica IDs de volume duplicados e gera etiquetas em PDF com QR Code.</p>
+        <ul class="tags" aria-label="Tecnologias"><li>Python</li><li>Tkinter</li><li>pandas</li><li>openpyxl</li><li>ReportLab</li><li>qrcode</li></ul>
         <details class="project-details">
-          <summary>Ver análise técnica<span class="sr-only"> de Transformação de tabelas e etiquetas de cliente</span><span aria-hidden="true">+</span></summary>
-          <dl class="case-details"><div><dt>Contexto</dt><dd>Preparação de tabelas e etiquetas de cliente utilizadas na rotina operacional.</dd></div><div><dt>Solução</dt><dd>Desenvolvi uma aplicação em Python para transformar as tabelas e gerar etiquetas a partir dos dados da operação.</dd></div><div><dt>Entrega</dt><dd>Tabelas transformadas e etiquetas de cliente geradas pela aplicação.</dd></div></dl>
+          <summary>Ver análise técnica<span class="sr-only"> de Etiquetas de cliente com QR Code</span><span aria-hidden="true">+</span></summary>
+          <dl class="case-details"><div><dt>Contexto</dt><dd>Preparação de etiquetas de cliente com identificação, produto, quantidade, peso e dados do volume a partir de uma base Excel.</dd></div><div><dt>Solução</dt><dd>Desenvolvi a interface em Tkinter e a leitura de arquivos .xlsx com pandas e openpyxl. Antes da geração, a aplicação verifica duplicidades na coluna IDV e interrompe o processo quando encontra IDs repetidos.</dd></div><div><dt>Entrega</dt><dd>PDF com uma etiqueta de 95 × 140 mm por linha da planilha. O ReportLab monta os documentos e a biblioteca qrcode gera um QR Code com o IDV de cada volume.</dd></div></dl>
           
           <p class="authorship">Desenvolvimento: Stênio Henrique de Souza.</p>
         </details>
@@ -75,18 +75,18 @@
       </div>
       <figure class="project-flow">
         <figcaption class="flow-caption"><span class="status-dot" aria-hidden="true"></span> FLUXO FUNCIONAL</figcaption>
-        <ol class="flow-steps"><li class="flow-step"><span class="micro">01 / ENTRADA</span><strong>Tabelas da operação</strong><span>Dados de origem</span></li><li class="flow-step"><span class="micro">02 / PROCESSAMENTO</span><strong>Transformação em Python</strong><span>Preparação dos dados</span></li><li class="flow-step"><span class="micro">03 / SAÍDA</span><strong>Etiquetas de cliente</strong><span>Dados aplicados às etiquetas</span></li></ol><p class="flow-note">Representação do funcionamento</p>
+        <ol class="flow-steps"><li class="flow-step"><span class="micro">01 / ENTRADA</span><strong>Planilha Excel (.xlsx)</strong><span>Dados do produto e do volume</span></li><li class="flow-step"><span class="micro">02 / PROCESSAMENTO</span><strong>Verificação de IDs duplicados</strong><span>Leitura da base e geração do QR Code</span></li><li class="flow-step"><span class="micro">03 / SAÍDA</span><strong>Etiquetas em PDF</strong><span>Uma etiqueta por linha • 95 × 140 mm</span></li></ol><p class="flow-note">Representação do funcionamento</p>
       </figure>
     </article>
     <article class="project-card" id="projeto-embarque-qr-code" data-category="python" aria-labelledby="title-embarque-qr-code">
       <div class="project-copy">
         <div class="project-top"><span class="project-number" aria-hidden="true">02</span><span class="micro">PYTHON / AUTOMAÇÃO OPERACIONAL</span></div>
-        <h3 id="title-embarque-qr-code">Vias de embarque com QR Code</h3>
-        <p>Geração automatizada de vias de embarque com QR Code para conferência.</p>
-        <ul class="tags" aria-label="Tecnologias"><li>Python</li><li>QR Code</li></ul>
+        <h3 id="title-embarque-qr-code">Vias de exportação com QR Code</h3>
+        <p>Sistema desktop com tabela editável e importação/exportação de Excel. Agrupa itens por palete e gera vias em PDF com QR Codes para conferência.</p>
+        <ul class="tags" aria-label="Tecnologias"><li>Python</li><li>CustomTkinter</li><li>tksheet</li><li>pandas</li><li>ReportLab</li></ul>
         <details class="project-details">
-          <summary>Ver análise técnica<span class="sr-only"> de Vias de embarque com QR Code</span><span aria-hidden="true">+</span></summary>
-          <dl class="case-details"><div><dt>Contexto</dt><dd>Emissão de vias de embarque associada à conferência dos documentos na expedição.</dd></div><div><dt>Solução</dt><dd>Automatizei a geração das vias em Python, incluindo QR Code para apoiar a conferência por leitura.</dd></div><div><dt>Entrega</dt><dd>Vias de embarque geradas automaticamente com QR Code de conferência.</dd></div></dl>
+          <summary>Ver análise técnica<span class="sr-only"> de Vias de exportação com QR Code</span><span aria-hidden="true">+</span></summary>
+          <dl class="case-details"><div><dt>Contexto</dt><dd>Emissão de vias de exportação com os itens de cada palete, importador, expedidor, referência e nota fiscal.</dd></div><div><dt>Solução</dt><dd>Desenvolvi a interface com CustomTkinter e uma tabela editável com tksheet. O sistema cria uma base modelo, carrega e salva planilhas Excel com pandas e agrupa os registros pelo número do palete.</dd></div><div><dt>Entrega</dt><dd>PDF único em A4 paisagem, com uma via por palete e um QR Code por item. Cada código reúne nota fiscal, código do produto, quantidade e número do palete. O ReportLab ajusta o conteúdo à área disponível da página.</dd></div></dl>
           
           <p class="authorship">Desenvolvimento: Stênio Henrique de Souza.</p>
         </details>
@@ -94,7 +94,7 @@
       </div>
       <figure class="project-flow">
         <figcaption class="flow-caption"><span class="status-dot" aria-hidden="true"></span> FLUXO FUNCIONAL</figcaption>
-        <ol class="flow-steps"><li class="flow-step"><span class="micro">01 / ENTRADA</span><strong>Dados de embarque</strong><span>Informações da expedição</span></li><li class="flow-step"><span class="micro">02 / PROCESSAMENTO</span><strong>Geração automatizada</strong><span>Vias de embarque + QR Code</span></li><li class="flow-step"><span class="micro">03 / SAÍDA</span><strong>Documentos para conferência</strong><span>Leitura do QR Code</span></li></ol><p class="flow-note">Representação do funcionamento</p>
+        <ol class="flow-steps"><li class="flow-step"><span class="micro">01 / ENTRADA</span><strong>Excel ou tabela editável</strong><span>Palete, nota fiscal, produto e quantidade</span></li><li class="flow-step"><span class="micro">02 / PROCESSAMENTO</span><strong>Agrupamento por palete</strong><span>Montagem das vias e QR Codes por item</span></li><li class="flow-step"><span class="micro">03 / SAÍDA</span><strong>PDF de exportação</strong><span>Uma via por palete • A4 paisagem</span></li></ol><p class="flow-note">Representação do funcionamento</p>
       </figure>
     </article>
     <article class="project-card" id="projeto-conferencia-bipagem" data-category="python" aria-labelledby="title-conferencia-bipagem">
@@ -185,12 +185,12 @@
     <section class="section-block section-shell" id="formacao" aria-labelledby="education-title">
       <div class="section-label"><span>06 / FORMAÇÃO</span><span class="fine-rule"></span></div>
       <h2 id="education-title">Aprendizado em evolução.</h2><div class="education-grid"><article class="education-card"><span class="education-status">PREVISÃO / 2028</span><h3>Tecnólogo em Análise e Desenvolvimento de Sistemas</h3><p>Universidade Estácio</p><span class="course-state">Cursando</span></article><article class="education-card"><span class="education-status">PREVISÃO / 2026</span><h3>Tecnólogo em Gestão da Qualidade</h3><p>UniCesumar</p><span class="course-state">Cursando</span></article><article class="education-card"><span class="education-status">CONCLUSÃO / 2024</span><h3>Técnico em Redes de Computadores</h3><p>SENAI</p><span class="course-state">Concluído</span></article></div>
-      <div class="courses"><h3>Cursos complementares</h3><ul><li><span>Multiplicador de Processos e Elaboração de WI</span><span class="course-school">DHL Supply Chain · 2025</span></li><li><span>Multiplicador Interno</span><span class="course-school">Cooper Standard · 2024</span></li><li><span>Auditoria Interna</span><span class="course-school">PP Print Embalagens · 2024</span></li><li><span>Indústria 4.0</span><span class="course-school">SENAI</span></li><li><span>Excel — Nível Intermediário/Avançado</span><span class="course-school">CEDUP</span></li></ul></div>
+      <div class="courses"><h3>Cursos complementares</h3><ul><li><span>Inteligência Artificial (IA) · Concluído</span><span class="course-school">Bradesco — em parceria com o Google</span></li><li><span>Multiplicador de Processos e Elaboração de WI</span><span class="course-school">DHL Supply Chain · 2025</span></li><li><span>Multiplicador Interno</span><span class="course-school">Cooper Standard · 2024</span></li><li><span>Auditoria Interna</span><span class="course-school">PP Print Embalagens · 2024</span></li><li><span>Indústria 4.0</span><span class="course-school">SENAI</span></li><li><span>Excel — Nível Intermediário/Avançado</span><span class="course-school">CEDUP</span></li></ul></div>
     </section>
 
     <section class="contact section-shell section-block" id="contato" aria-labelledby="contact-title">
       <div class="section-label"><span>07 / CONTATO</span><span class="fine-rule"></span></div>
-      <div class="contact-grid"><div><p class="eyebrow">SUPORTE · TI · SISTEMAS</p><h2 id="contact-title">Vamos conversar<br>sobre <span>tecnologia?</span></h2><p>Para oportunidades profissionais ou uma conversa sobre meus projetos.</p></div><div class="contact-links"><a class="contact-email" href="mailto:souzastenio812@gmail.com"><span class="micro">E-MAIL</span><strong>souzastenio812@gmail.com</strong><span aria-hidden="true">↗</span></a><div class="social-links"><a href="https://www.linkedin.com/in/stênio-henrique-de-souza-6307421ba" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/souzastenio812-byte" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><button class="copy-email" hidden>Copiar e-mail <span aria-hidden="true">⧉</span></button></div><p class="copy-status" role="status" aria-live="polite"></p></div></div>
+      <div class="contact-grid"><div><p class="eyebrow">SUPORTE · TI · SISTEMAS</p><h2 id="contact-title">Vamos conversar<br>sobre <span>tecnologia?</span></h2><p>Para oportunidades profissionais ou uma conversa sobre meus projetos.</p></div><div class="contact-links"><a class="contact-email" href="mailto:souzastenio812@gmail.com"><span class="micro">E-MAIL</span><strong>souzastenio812@gmail.com</strong><span aria-hidden="true">↗</span></a><a class="contact-whatsapp" href="https://wa.me/5535998650552" target="_blank" rel="noopener noreferrer" aria-label="Conversar com Stênio pelo WhatsApp: (35) 99865-0552 (abre em nova aba)"><span><span class="micro">WHATSAPP</span><strong>(35) 99865-0552</strong></span><span aria-hidden="true">↗</span></a><div class="social-links"><a href="https://www.linkedin.com/in/stênio-henrique-de-souza-6307421ba" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/souzastenio812-byte" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><button class="copy-email" hidden>Copiar e-mail <span aria-hidden="true">⧉</span></button></div><p class="copy-status" role="status" aria-live="polite"></p></div></div>
     </section>
   </main>
   <footer class="footer section-shell"><span>© <span data-year>2026</span> Stênio Henrique de Souza</span><span class="mono">Processos reais. Soluções em código.</span><a href="#inicio">Voltar ao topo <span aria-hidden="true">↑</span></a></footer>
