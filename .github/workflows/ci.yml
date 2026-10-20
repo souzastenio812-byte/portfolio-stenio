@@ -1,0 +1,30 @@
+name: Verificar portfólio
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - name: Gerar HTML
+        run: python build.py
+      - name: Testar conteúdo e componentes
+        run: python -m unittest -v
+      - name: Validar sintaxe JavaScript
+        run: node --check app.js
+      - name: Confirmar HTML sincronizado com o conteúdo
+        run: git diff --exit-code -- index.html
